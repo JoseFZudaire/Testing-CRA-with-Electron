@@ -1,0 +1,21 @@
+{
+  "name": "desktop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "cd ../web-app && npm run build && cd ../desktop && (if exist builder rd /s /q builder) && mkdir builder && cd .. && xcopy /s .\\web-app\\build\\ .\\desktop\\builder\\ && cd ./desktop && electron-builder"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "electron": "^31.3.1",
+    "electron-builder": "^24.13.3",
+    "electron-is-dev": "^3.0.1"
+  }
+}
